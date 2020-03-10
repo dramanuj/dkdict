@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <div id="dkWord">!</div>
+    <div id="engWord">!</div>
+
+    <script src="danishDict.js"></script>
+    <script>
+  
+    window.onload = function() {
+        setTimeout(runDictSlideShow(dict), 5000);;
+    };
+
+    function runDictSlideShow(dict) {
+        var items = Object.keys(dict);
+        var item = items[Math.floor(Math.random() * items.length)];        
+        document.getElementById("dkWord").innerHTML = item;
+        sleep(2000);
+        document.getElementById("engWord").innerHTML = dict[item];
+    
+    }
+
+    function sleep(milliseconds) {
+        var start = new Date().getTime();
+        for (var i = 0; i < 1e7; i++) {
+                if ((new Date().getTime() - start) > milliseconds){
+                    break;
+                 }
+            }
+    }
+
+      </script>
+      
+
+
+</body>
+</html>
