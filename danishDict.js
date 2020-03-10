@@ -102,7 +102,7 @@ var dict = {
     "langvejs": "a long way",
     "lighed": "equality",
     "læs": "load",
-    "løfte:": "to promise, to lift",
+    "løfte": "to promise, to lift",
     "medfølelse": "compassion",
     "missionær": "missionary",
     "miste": "to lose",
