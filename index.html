@@ -19,20 +19,44 @@
   
 <script src="danishDict.js"></script>
 <script>
-  
-  
-setInterval(runDictSlideShow, 5000, dict);
 
-function runDictSlideShow(dict) {
-        var items = Object.keys(dict);
-        var item = items[Math.floor(Math.random() * items.length)];   
+var items = Object.keys(dict)
+var uLimit = items.length;
+var randomArray = createArray(uLimit);
+randomArray = shuffleArray(randomArray);
+  
+setInterval(runDictSlideShow, 5000, dict, items, randomArray);
+function runDictSlideShow(dict, items, randomArray) {
+  if (randomArray.length > 0){
+        var randNum = randomArray.pop(0);
+        var item = items[randNum];   
         document.getElementById("engWord").innerHTML = " ";     
         document.getElementById("dkWord").innerHTML = item;
-        setTimeout(function(){ document.getElementById("engWord").innerHTML = dict[item];}, 2000);
+        setTimeout(function(){ document.getElementById("engWord").innerHTML = dict[item];}, 2000);  
     }
+    if(randomArray.length == 0){location.reload();}
+  }
 
     
+function createArray(uplim){
+  numArray=[];
+  for(i=1;i<=uplim;i++){
+    numArray.push(i);
+  };
+return numArray;
+}
 
+function shuffleArray(numArray) {
+  var currentIndex = numArray.length, temporaryValue, randomIndex;
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    temporaryValue = numArray[currentIndex];
+    numArray[currentIndex] = numArray[randomIndex];
+    numArray[randomIndex] = temporaryValue;
+  }
+  return numArray;
+}
       </script>
       
 </body>
