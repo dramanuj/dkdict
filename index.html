@@ -2,31 +2,23 @@
 <html>
 <body>
 
-    <div id="dkWord">!</div>
-    <div id="engWord">!</div>
+<div id="dkWord">!</div>
+<div id="engWord">!</div>
 
-    <script src="danishDict.js"></script>
-    <script>
+<script src="danishDict.js"></script>
+<script>
   
   
-  setInterval(runDictSlideShow(dict), 2000);
+setInterval(runDictSlideShow, 5000, dict);
 
-    function runDictSlideShow(dict) {
+function runDictSlideShow(dict) {
         var items = Object.keys(dict);
         var item = items[Math.floor(Math.random() * items.length)];        
         document.getElementById("dkWord").innerHTML = item;
-        sleep(2000);
-        document.getElementById("engWord").innerHTML = dict[item];
+        setTimeout(function(){ document.getElementById("engWord").innerHTML = dict[item];}, 2000);
     }
 
-    function sleep(milliseconds) {
-        var start = new Date().getTime();
-        for (var i = 0; i < 1e7; i++) {
-                if ((new Date().getTime() - start) > milliseconds){
-                    break;
-                 }
-            }
-    }
+    
 
       </script>
       
