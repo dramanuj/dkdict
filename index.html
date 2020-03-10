@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <style>
+      div.a {font-size: 55px;  text-align: center;}
+      div.b {font-size: 35px; color: rgb(100,100,100); text-align: center;}
+    </style>
+
+
+
+</head>
+
 <body>
 
-<div id="dkWord">!</div>
-<div id="engWord">!</div>
-
+    <div id="dkWord" class="a">!</div>
+    <div></div>
+    <div id="engWord" class="b">!</div>
+  
 <script src="danishDict.js"></script>
 <script>
   
@@ -13,7 +24,8 @@ setInterval(runDictSlideShow, 5000, dict);
 
 function runDictSlideShow(dict) {
         var items = Object.keys(dict);
-        var item = items[Math.floor(Math.random() * items.length)];        
+        var item = items[Math.floor(Math.random() * items.length)];   
+        document.getElementById("engWord").innerHTML = " ";     
         document.getElementById("dkWord").innerHTML = item;
         setTimeout(function(){ document.getElementById("engWord").innerHTML = dict[item];}, 2000);
     }
