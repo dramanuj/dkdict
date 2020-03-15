@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+      div.main{padding: 85px 0; text-align: center;}
+      div.dk {font-size: 85px;  text-align: center;}
+      div.space {height: 25px;  text-align: center;}
+      div.eng {font-size: 35px; text-align: center; color: rgb(100,100,100);}
+    </style>
+
+
+
+</head>
+
+<body>
+  <div class="main">
+    <div id="dkWord" class="dk">!</div>
+    <div class="space"></div>
+    <div id="engWord" class="eng">!</div>
+  </div>
+<script src="danishDict.js"></script>
+<script>
+
+var items = Object.keys(dict);
+items = inputWordListLetter(items);
+setInterval(runDictSlideShow, 5000, dict, items, shuffleArray(createArray(items.length)));
+
+function runDictSlideShow(dict, items, randomArray) {
+  if (randomArray.length > 0){
+        var randNum = randomArray.pop(0);
+        var item = items[randNum];  
+        document.getElementById("engWord").innerHTML = " "; 
+        var fixedstring;
+        try{
+             // If the string is UTF-8, this will work and not throw an error.
+            fixedstring=decodeURIComponent(escape(item));
+        }catch(e){
+            // If it isn't, an error will be thrown, and we can assume that we have an ISO string.
+              fixedstring=item;
+        }    
+        document.getElementById("dkWord").innerHTML = fixedstring;
+        setTimeout(function(){ document.getElementById("engWord").innerHTML = dict[item];}, 2000);  
+    }
+    if(randomArray.length == 0){
+      setTimeout(function(){location.reload();}, 10000); 
+      }
+  }
+
+    
+function createArray(uplim){
+  numArray=[];
+  for(i=0;i<uplim;i++){
+    numArray.push(i);
+  };
+return numArray;
+}
+
+function shuffleArray(numArray) {
+  var currentIndex = numArray.length, temporaryValue, randomIndex;
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    temporaryValue = numArray[currentIndex];
+    numArray[currentIndex] = numArray[randomIndex];
+    numArray[randomIndex] = temporaryValue;
+  }
+  return numArray;
+}
+
+
+function inputWordListLetter() {
+  var letter = prompt("Please enter a letter (e.g., \'a\') or prefix (e.g., \'af\') and click OK to filter words from the list. Click cancel to show all words from the list.");
+  // var testLetter = /^[a-zA-Z\-_ ’'‘ÆÐƎƏƐƔĲŊŒẞÞǷȜæðǝəɛɣĳŋœĸſßþƿȝĄƁÇĐƊĘĦĮƘŁØƠŞȘŢȚŦŲƯY̨Ƴąɓçđɗęħįƙłøơşșţțŧųưy̨ƴÁÀÂÄǍĂĀÃÅǺĄÆǼǢƁĆĊĈČÇĎḌĐƊÐÉÈĖÊËĚĔĒĘẸƎƏƐĠĜǦĞĢƔáàâäǎăāãåǻąæǽǣɓćċĉčçďḍđɗðéèėêëěĕēęẹǝəɛġĝǧğģɣĤḤĦIÍÌİÎÏǏĬĪĨĮỊĲĴĶƘĹĻŁĽĿʼNŃN̈ŇÑŅŊÓÒÔÖǑŎŌÕŐỌØǾƠŒĥḥħıíìiîïǐĭīĩįịĳĵķƙĸĺļłľŀŉńn̈ňñņŋóòôöǒŏōõőọøǿơœŔŘŖŚŜŠŞȘṢẞŤŢṬŦÞÚÙÛÜǓŬŪŨŰŮŲỤƯẂẀŴẄǷÝỲŶŸȲỸƳŹŻŽẒŕřŗſśŝšşșṣßťţṭŧþúùûüǔŭūũűůųụưẃẁŵẅƿýỳŷÿȳỹƴźżžẓ]$/.test(letter)
+  if (letter != null){
+    var indices = [];
+    for(var i=0; i<items.length;i++) {
+      var word = items[i]
+      var fixedstring
+      try{
+          // If the string is UTF-8, this will work and not throw an error.
+          fixedstring=decodeURIComponent(escape(word));
+        }catch(e){
+          // If it isn't, an error will be thrown, and we can assume that we have an ISO string.
+          fixedstring=word;
+       } 
+      if (fixedstring.substring(0,letter.length) == letter){
+        indices.push(i);
+      }  
+    }
+    var newItems = [];
+    for (i in indices){
+      newItems.push(items[indices[i]]);
+    }
+    if (newItems.length == 0){
+      alert("No matching words found! Please enter another letter or prefix.");
+      inputWordListLetter()
+    }
+    else{items = newItems;}
+  }
+
+  
+  return items;
+}
+
+      </script>
+      
+</body>
+</html>

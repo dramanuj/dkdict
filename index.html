@@ -14,95 +14,25 @@
 
 <body>
   <div class="main">
-    <div id="dkWord" class="dk">!</div>
-    <div class="space"></div>
-    <div id="engWord" class="eng">!</div>
+      <p><button onclick="loadSlideshow(1)">General Dictionary</button></p>
+      <p><button onclick="loadSlideshow(2)">Phrases to Know</button></p>
+      <p><button onclick="loadSlideshow(3)">Statistics Terms</button></p>
+      <p><button onclick="loadSlideshow(4)">Verber For Sjov</button></p>
+      <p><button onclick="loadSlideshow(5)">Forbindelse Ord</button></p>
   </div>
+   
 <script src="danishDict.js"></script>
-<script>
-
-var items = Object.keys(dict);
-items = inputWordListLetter(items);
-setInterval(runDictSlideShow, 5000, dict, items, shuffleArray(createArray(items.length)));
-
-function runDictSlideShow(dict, items, randomArray) {
-  if (randomArray.length > 0){
-        var randNum = randomArray.pop(0);
-        var item = items[randNum];  
-        document.getElementById("engWord").innerHTML = " "; 
-        var fixedstring;
-        try{
-             // If the string is UTF-8, this will work and not throw an error.
-            fixedstring=decodeURIComponent(escape(item));
-        }catch(e){
-            // If it isn't, an error will be thrown, and we can assume that we have an ISO string.
-              fixedstring=item;
-        }    
-        document.getElementById("dkWord").innerHTML = fixedstring;
-        setTimeout(function(){ document.getElementById("engWord").innerHTML = dict[item];}, 2000);  
-    }
-    if(randomArray.length == 0){
-      setTimeout(function(){location.reload();}, 10000); 
-      }
-  }
-
-    
-function createArray(uplim){
-  numArray=[];
-  for(i=0;i<uplim;i++){
-    numArray.push(i);
-  };
-return numArray;
+<script> 
+var items; 
+function loadSlideshow(mode) {
+if (mode == 1)      items = Object.keys(dict);
+else if (mode == 2) items = Object.keys(phrasesToKnow);
+else if (mode == 3) items = Object.keys(statisticsTerms);
+else if (mode == 4) items = Object.keys(verberForSjov);
+else if (mode == 5) items = Object.keys(forbindelseOrd);
+window.open("https://dramanuj.github.io/dkdict/wordSlideshow.html","_self")
 }
-
-function shuffleArray(numArray) {
-  var currentIndex = numArray.length, temporaryValue, randomIndex;
-  while (0 !== currentIndex) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-    temporaryValue = numArray[currentIndex];
-    numArray[currentIndex] = numArray[randomIndex];
-    numArray[randomIndex] = temporaryValue;
-  }
-  return numArray;
-}
-
-
-function inputWordListLetter() {
-  var letter = prompt("Please enter a letter (e.g., \'a\') or prefix (e.g., \'af\') and click OK to filter words from the list. Click cancel to show all words from the list.");
-  // var testLetter = /^[a-zA-Z\-_ ’'‘ÆÐƎƏƐƔĲŊŒẞÞǷȜæðǝəɛɣĳŋœĸſßþƿȝĄƁÇĐƊĘĦĮƘŁØƠŞȘŢȚŦŲƯY̨Ƴąɓçđɗęħįƙłøơşșţțŧųưy̨ƴÁÀÂÄǍĂĀÃÅǺĄÆǼǢƁĆĊĈČÇĎḌĐƊÐÉÈĖÊËĚĔĒĘẸƎƏƐĠĜǦĞĢƔáàâäǎăāãåǻąæǽǣɓćċĉčçďḍđɗðéèėêëěĕēęẹǝəɛġĝǧğģɣĤḤĦIÍÌİÎÏǏĬĪĨĮỊĲĴĶƘĹĻŁĽĿʼNŃN̈ŇÑŅŊÓÒÔÖǑŎŌÕŐỌØǾƠŒĥḥħıíìiîïǐĭīĩįịĳĵķƙĸĺļłľŀŉńn̈ňñņŋóòôöǒŏōõőọøǿơœŔŘŖŚŜŠŞȘṢẞŤŢṬŦÞÚÙÛÜǓŬŪŨŰŮŲỤƯẂẀŴẄǷÝỲŶŸȲỸƳŹŻŽẒŕřŗſśŝšşșṣßťţṭŧþúùûüǔŭūũűůųụưẃẁŵẅƿýỳŷÿȳỹƴźżžẓ]$/.test(letter)
-  if (letter != null){
-    var indices = [];
-    for(var i=0; i<items.length;i++) {
-      var word = items[i]
-      var fixedstring
-      try{
-          // If the string is UTF-8, this will work and not throw an error.
-          fixedstring=decodeURIComponent(escape(word));
-        }catch(e){
-          // If it isn't, an error will be thrown, and we can assume that we have an ISO string.
-          fixedstring=word;
-       } 
-      if (fixedstring.substring(0,letter.length) == letter){
-        indices.push(i);
-      }  
-    }
-    var newItems = [];
-    for (i in indices){
-      newItems.push(items[indices[i]]);
-    }
-    if (newItems.length == 0){
-      alert("No matching words found! Please enter another letter or prefix.");
-      inputWordListLetter()
-    }
-    else{items = newItems;}
-  }
-
-  
-  return items;
-}
-
-      </script>
+</script>
       
 </body>
 </html>
