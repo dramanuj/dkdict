@@ -24,15 +24,15 @@
 <script src="danishDict.js"></script>
 <script> 
 function loadSlideshow(mode) {
-if (mode == 1)      items = Object.keys(dict);
-else if (mode == 2) items = Object.keys(phrasesToKnow);
-else if (mode == 3) items = Object.keys(statisticsTerms);
-else if (mode == 4) items = Object.keys(verberForSjov);
-else if (mode == 5) items = Object.keys(forbindelseOrd);
-localStorage.setItem("dictItem",items);
-window.open("https://dramanuj.github.io/dkdict/wordSlideshow.html","_self")
+if (mode == 1)      localStorage.setItem("dict",JSON.stringify(dict));
+else if (mode == 2) localStorage.setItem("dict",JSON.stringify(phrasesToKnow));
+else if (mode == 3) localStorage.setItem("dict",JSON.stringify(statisticsTerms));
+else if (mode == 4) localStorage.setItem("dict",JSON.stringify(verberForSjov));
+else if (mode == 5) localStorage.setItem("dict",JSON.stringify(forbindelseOrd));
+window.open("./wordSlideshow.html","_self");
 }
 </script>
       
 </body>
 </html>
+

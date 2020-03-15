@@ -1,4 +1,3 @@
-var items; // Global Variable
 
 var dict = {
     "albue": "elbow, to elbow",
@@ -237,6 +236,10 @@ var dict = {
     "nogenlunde":"roughly",
     "gennemførte": "completed",
     "lokke": "lure",
+    "herkomst": "birth, origin",
+    "bukke": "bow down",
+    "snavset": "dirty",
+    "jævne": "level, even",
 
 
 
@@ -272,12 +275,7 @@ var statisticsTerms = {
     "faldende brug af": "falling use of",
     "stigende brug af": "rising use of",
     "tælle": "to count",
-    "herkomst": "birth, origin",
-    "bukke": "bow down",
-    "snavset": "dirty",
-    "jævne": "level, even",
-
-
+    
 };
 
 
@@ -291,7 +289,7 @@ var verberForSjov={
     "falde af": "fall of (e.g., horse)",
     "falde over": "trip over, stumble over",
     "falde ind": "adapt",
-    "falde i": "joinin, fall in",
+    "falde i": "join in, fall in",
     "falde til": "settle down",
     "falde fra": "drop out, fall apart",
     "brænde på": "burnt (e.g., porridge)",

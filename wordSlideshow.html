@@ -21,11 +21,11 @@
 <script src="danishDict.js"></script>
 <script>
 
-// var items = Object.keys(dict);
-window.onload = function() {
-items = inputWordListLetter(localStorage.getItem("dictItem"));
+
+var dict = JSON.parse(localStorage.getItem("dict"));
+var items = Object.keys(dict);
+items = inputWordListLetter(items);
 setInterval(runDictSlideShow, 5000, dict, items, shuffleArray(createArray(items.length)));
-}
 
 
 function runDictSlideShow(dict, items, randomArray) {
@@ -45,7 +45,9 @@ function runDictSlideShow(dict, items, randomArray) {
         setTimeout(function(){ document.getElementById("engWord").innerHTML = dict[item];}, 2000);  
     }
     if(randomArray.length == 0){
-      setTimeout(function(){location.reload();}, 10000); 
+      setTimeout(function(){
+        window.open("./index.html","_self")
+      }, 10000); 
       }
   }
 
@@ -71,7 +73,7 @@ function shuffleArray(numArray) {
 }
 
 
-function inputWordListLetter() {
+function inputWordListLetter(items) {
   var letter = prompt("Please enter a letter (e.g., \'a\') or prefix (e.g., \'af\') and click OK to filter words from the list. Click cancel to show all words from the list.");
   // var testLetter = /^[a-zA-Z\-_ ’'‘ÆÐƎƏƐƔĲŊŒẞÞǷȜæðǝəɛɣĳŋœĸſßþƿȝĄƁÇĐƊĘĦĮƘŁØƠŞȘŢȚŦŲƯY̨Ƴąɓçđɗęħįƙłøơşșţțŧųưy̨ƴÁÀÂÄǍĂĀÃÅǺĄÆǼǢƁĆĊĈČÇĎḌĐƊÐÉÈĖÊËĚĔĒĘẸƎƏƐĠĜǦĞĢƔáàâäǎăāãåǻąæǽǣɓćċĉčçďḍđɗðéèėêëěĕēęẹǝəɛġĝǧğģɣĤḤĦIÍÌİÎÏǏĬĪĨĮỊĲĴĶƘĹĻŁĽĿʼNŃN̈ŇÑŅŊÓÒÔÖǑŎŌÕŐỌØǾƠŒĥḥħıíìiîïǐĭīĩįịĳĵķƙĸĺļłľŀŉńn̈ňñņŋóòôöǒŏōõőọøǿơœŔŘŖŚŜŠŞȘṢẞŤŢṬŦÞÚÙÛÜǓŬŪŨŰŮŲỤƯẂẀŴẄǷÝỲŶŸȲỸƳŹŻŽẒŕřŗſśŝšşșṣßťţṭŧþúùûüǔŭūũűůųụưẃẁŵẅƿýỳŷÿȳỹƴźżžẓ]$/.test(letter)
   if (letter != null){
@@ -96,7 +98,7 @@ function inputWordListLetter() {
     }
     if (newItems.length == 0){
       alert("No matching words found! Please enter another letter or prefix.");
-      inputWordListLetter()
+      inputWordListLetter(items)
     }
     else{items = newItems;}
   }
