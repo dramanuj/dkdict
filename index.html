@@ -69,9 +69,9 @@ function shuffleArray(numArray) {
 
 
 function inputWordListLetter() {
-  var letter = prompt("Please enter a letter (e.g., \'a\') or prefix (e.g., \'af\') to start the list. Leave empty for all words");
+  var letter = prompt("Please enter a letter (e.g., \'a\') or prefix (e.g., \'af\') and click OK to filter words from the list. Click cancel to show all words from the list.");
   // var testLetter = /^[a-zA-Z\-_ ’'‘ÆÐƎƏƐƔĲŊŒẞÞǷȜæðǝəɛɣĳŋœĸſßþƿȝĄƁÇĐƊĘĦĮƘŁØƠŞȘŢȚŦŲƯY̨Ƴąɓçđɗęħįƙłøơşșţțŧųưy̨ƴÁÀÂÄǍĂĀÃÅǺĄÆǼǢƁĆĊĈČÇĎḌĐƊÐÉÈĖÊËĚĔĒĘẸƎƏƐĠĜǦĞĢƔáàâäǎăāãåǻąæǽǣɓćċĉčçďḍđɗðéèėêëěĕēęẹǝəɛġĝǧğģɣĤḤĦIÍÌİÎÏǏĬĪĨĮỊĲĴĶƘĹĻŁĽĿʼNŃN̈ŇÑŅŊÓÒÔÖǑŎŌÕŐỌØǾƠŒĥḥħıíìiîïǐĭīĩįịĳĵķƙĸĺļłľŀŉńn̈ňñņŋóòôöǒŏōõőọøǿơœŔŘŖŚŜŠŞȘṢẞŤŢṬŦÞÚÙÛÜǓŬŪŨŰŮŲỤƯẂẀŴẄǷÝỲŶŸȲỸƳŹŻŽẒŕřŗſśŝšşșṣßťţṭŧþúùûüǔŭūũűůųụưẃẁŵẅƿýỳŷÿȳỹƴźżžẓ]$/.test(letter)
-  if (letter != "*"){
+  if (letter != null){
     var indices = [];
     for(var i=0; i<items.length;i++) {
       var word = items[i]
@@ -97,6 +97,8 @@ function inputWordListLetter() {
     }
     else{items = newItems;}
   }
+
+  
   return items;
 }
 
