@@ -22,10 +22,10 @@
 <script>
 
 // var items = Object.keys(dict);
-
-items = inputWordListLetter(items);
+window.onload = function() {
+items = inputWordListLetter(localStorage.getItem("dictItem"));
 setInterval(runDictSlideShow, 5000, dict, items, shuffleArray(createArray(items.length)));
-
+}
 
 
 function runDictSlideShow(dict, items, randomArray) {
