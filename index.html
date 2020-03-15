@@ -20,13 +20,22 @@
   </div>
 <script src="danishDict.js"></script>
 <script>
-
+var letter = inputWordListLetter();
 var items = Object.keys(dict)
-var uLimit = items.length;
+var firstItem = items.map(([v])=> v);
+var matchItems = [];
+var index = firstItem.indexOf(letter);
+for (var i in index) {
+  matchItems.push(items[index[i]]);
+}
+
+var uLimit = matchItems.length;
 var randomArray = createArray(uLimit);
 randomArray = shuffleArray(randomArray);
-  
-setInterval(runDictSlideShow, 5000, dict, items, randomArray);
+setInterval(runDictSlideShow, 5000, dict, matchItems, randomArray);
+
+
+
 function runDictSlideShow(dict, items, randomArray) {
   if (randomArray.length > 0){
         var randNum = randomArray.pop(0);
@@ -58,6 +67,24 @@ function shuffleArray(numArray) {
   }
   return numArray;
 }
+
+
+function inputWordListLetter() {
+  var letter = prompt("Please enter a letter to start the list");
+  var testLetter = /^[a-zA-Z\-_ ’'‘ÅåÆæØø]$/.test(letter)
+  if (testLetter == true) {
+    return letter
+  } else {
+
+    alert("Oops :( - Please enter a valid letter");
+    inputWordListLetter();
+  }
+
+
+
+}
+
+
       </script>
       
 </body>
