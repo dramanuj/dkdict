@@ -1,11 +1,14 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
+  <meta charset="utf-8">
     <style>
-      div.main{padding: 85px 0; text-align: center;}
-      div.dk {font-size: 85px;  text-align: center;}
-      div.space {height: 25px;  text-align: center;}
-      div.eng {font-size: 35px; text-align: center; color: rgb(100,100,100);}
+      div.main{padding: 5px 0; text-align: center; font-size: 15px;  opacity: 0.5; border: 2px solid red;}
+      .main:hover {
+        opacity: 1;
+          }
+      
+
     </style>
 
 
@@ -13,16 +16,41 @@
 </head>
 
 <body>
-  <div class="main">
-      <p><button onclick="loadSlideshow(1)">General Dictionary</button></p>
-      <p><button onclick="loadSlideshow(2)">Phrases to Know</button></p>
-      <p><button onclick="loadSlideshow(3)">Statistics Terms</button></p>
-      <p><button onclick="loadSlideshow(4)">Verber For Sjov</button></p>
-      <p><button onclick="loadSlideshow(5)">Forbindelse Ord</button></p>
-  </div>
+  <div class="main" onclick="loadSlideshow(1)" title="Click to load">
+    <h2>General Dictionary</h2>
+    <canvas id="bar-chart-1" width="400" height="75"></canvas>
+  </div> 
+  
+  <div class="main" onclick="loadSlideshow(2)" title="Click to load">
+    <h2>Phrases to know</h2>
+    <canvas id="bar-chart-2" width="400" height="75"></canvas>
+  </div> 
+
+  <div class="main" onclick="loadSlideshow(3)" title="Click to load">
+    <h2>Statistics terms</h2>
+    <canvas id="bar-chart-3" width="400" height="75"></canvas>
+  </div> 
+
+  <div class="main" onclick="loadSlideshow(4)" title="Click to load">
+    <h2>Verber for sjov</h2>
+    <canvas id="bar-chart-4" width="400" height="75"></canvas>
+  </div> 
+
+  <div class="main" onclick="loadSlideshow(5)" title="Click to load">
+    <h2>Forbindelse ord</h2>
+    <canvas id="bar-chart-5" width="400" height="75"></canvas>
+  </div> 
+      
    
-<script src="danishDict.js"></script>
+<script src="danishDict.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 <script> 
+checkAvalilableLetters(dict,1); 
+checkAvalilableLetters(phrasesToKnow,2); 
+checkAvalilableLetters(statisticsTerms,3); 
+checkAvalilableLetters(verberForSjov,4); 
+checkAvalilableLetters(forbindelseOrd,5); 
+
 function loadSlideshow(mode) {
 if (mode == 1)      localStorage.setItem("dict",JSON.stringify(dict));
 else if (mode == 2) localStorage.setItem("dict",JSON.stringify(phrasesToKnow));
@@ -31,6 +59,58 @@ else if (mode == 4) localStorage.setItem("dict",JSON.stringify(verberForSjov));
 else if (mode == 5) localStorage.setItem("dict",JSON.stringify(forbindelseOrd));
 window.open("./wordSlideshow.html","_self");
 }
+
+
+function checkAvalilableLetters(dict,mode) {
+  var items = Object.keys(dict);
+  var allChars = "abcdefghijklmnopqrstuvwxyz\u00e6\u00f8\u00e5";
+  allChars=allChars.split('');
+  var indexArray = new Array(allChars.length).fill(0);
+  for(var i=0; i<items.length;i++){
+      var word = items[i]
+      var fixedstring
+      try{
+          // If the string is UTF-8, this will work and not throw an error.
+          fixedstring=decodeURIComponent(escape(word));
+        }catch(e){
+          // If it isn't, an error will be thrown, and we can assume that we have an ISO string.
+          fixedstring=word;
+       } 
+
+       for(var j=0; j<allChars.length;j++) {
+          var charCheck = allChars[j];
+          if (fixedstring[0] == charCheck){
+              indexArray[j] = indexArray[j] + 1;
+        }  
+    }}
+
+    console.log(allChars);
+// Bar chart
+var chartId = "bar-chart-"+mode;
+new Chart(document.getElementById(chartId), {
+    type: 'bar',
+    data: {
+      labels: allChars,
+      datasets: [
+        {
+          label: "Word Count",
+          data: indexArray
+        }
+      ]
+    },
+    backgroundColor: '#008CBA',
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Frequency of words in list'
+      }
+    }
+});
+
+  }
+
+
 </script>
       
 </body>

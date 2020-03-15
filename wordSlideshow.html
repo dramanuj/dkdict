@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
     <style>
       div.main{padding: 85px 0; text-align: center;}
       div.dk {font-size: 85px;  text-align: center;}
@@ -18,7 +19,8 @@
     <div class="space"></div>
     <div id="engWord" class="eng">!</div>
   </div>
-<script src="danishDict.js"></script>
+<script src="danishDict.js" charset="utf-8"></script>
+
 <script>
 
 
@@ -97,7 +99,8 @@ function inputWordListLetter(items) {
       newItems.push(items[indices[i]]);
     }
     if (newItems.length == 0){
-      alert("No matching words found! Please enter another letter or prefix.");
+      alert("No matching words found!");
+      //items = Object.keys(dict);
       window.open("./index.html","_self")
     }
     else{items = newItems;}
