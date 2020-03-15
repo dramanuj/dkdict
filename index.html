@@ -91,8 +91,7 @@ function inputWordListLetter() {
     for (i in indices){
       newItems.push(items[indices[i]]);
     }
-
-    if (items === undefined || items.length == 0){inputWordListLetter()}
+    if (newItems.length == 0){inputWordListLetter()}
     else{items = newItems;}
   }
   return items;
