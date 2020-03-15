@@ -91,7 +91,10 @@ function inputWordListLetter() {
     for (i in indices){
       newItems.push(items[indices[i]]);
     }
-    if (newItems.length == 0){inputWordListLetter()}
+    if (newItems.length == 0){
+      alert("No matching words found! Please enter another letter or prefix.");
+      inputWordListLetter()
+    }
     else{items = newItems;}
   }
   return items;
