@@ -22,11 +22,10 @@
 <script>
 
 // var items = Object.keys(dict);
-document.addEventListener('DOMContentLoaded', function() {
-    items = inputWordListLetter(items);
-    setInterval(runDictSlideShow, 5000, dict, items, shuffleArray(createArray(items.length)));
-;
-}, false);
+
+items = inputWordListLetter(items);
+setInterval(runDictSlideShow, 5000, dict, items, shuffleArray(createArray(items.length)));
+
 
 
 function runDictSlideShow(dict, items, randomArray) {
