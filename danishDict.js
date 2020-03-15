@@ -1,3 +1,4 @@
+var items; // Global Variable
 
 var dict = {
     "albue": "elbow, to elbow",
@@ -236,7 +237,7 @@ var dict = {
     "nogenlunde":"roughly",
     "gennemførte": "completed",
     "lokke": "lure",
-    
+
 
 
 

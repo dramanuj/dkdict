@@ -22,8 +22,12 @@
 <script>
 
 // var items = Object.keys(dict);
-items = inputWordListLetter(items);
-setInterval(runDictSlideShow, 5000, dict, items, shuffleArray(createArray(items.length)));
+document.addEventListener('DOMContentLoaded', function() {
+    items = inputWordListLetter(items);
+    setInterval(runDictSlideShow, 5000, dict, items, shuffleArray(createArray(items.length)));
+;
+}, false);
+
 
 function runDictSlideShow(dict, items, randomArray) {
   if (randomArray.length > 0){
