@@ -5,12 +5,10 @@ var dict = {
     "bonde": "farmer",
     "bred": "shore, broad, wide",
     "brede ud": "to spread out, to unfold",
-    "brede": "to spread",
     "bunke": "pile",
     "byde": "to offer",
     "byld": "abscess",
     "bøje": "to bend",
-    "duft": "fragrance",
     "dufte": "to smell",
     "ellers": "otherwise",
     "endnu": "still, yet",
@@ -25,7 +23,6 @@ var dict = {
     "fremmed": "foreign, strange",
     "fugtig":"humid",
     "gemme": "to save, to hide",
-    "glæde": "joy",
     "gribe": "to grip, to catch",
     "græsse": "to graze",
     "gå i gang": "to start, to begin",
@@ -69,18 +66,12 @@ var dict = {
     "kopper": "smallpox",
     "kølig": "cool",
     "landbrug": "agriculture, farming",
-    "landskab": "landscape",
     "langt fra": "a long way from, far away from",
     "langt ind i": "far into",
     "langt om længe": "at long last",
-    "langt væk": "far away",
-    "langtfra": "not at all, far from",
-    "langvejs": "a long way",
-    "lighed": "equality",
     "læs": "load",
     "løfte": "to promise, to lift",
     "medfølelse": "compassion",
-    "miste": "to lose",
     "mon": "I wonder",
     "må hellere": "better",
     "nikke": "to nod",
@@ -101,21 +92,17 @@ var dict = {
     "regne med": "count on, depend on",
     "regne": "to calculate",
     "regnskab": "account",
-    "rejsende": "traveller",
-    "ryg": "back",
     "rygte": "rumor",
     "rynke": "to frown, wrinkle",
     "ryste": "to shake, to upset",
     "række ud": "to reach out",
     "røver": "robber",
-    "skab": "cupboard, closet",
     "skomager": "cobbler",
     "skridt": "step",
     "skrædderværksted": "tailor workshop",
     "skygge": "shadow",
     "skynde": "to rush",
     "skælde": "to scold",
-    "slags": "type",
     "slette": "plain, field, to delete, to erase",
     "slippe": "to release",
     "smed": "smith",
@@ -123,8 +110,6 @@ var dict = {
     "snedker": "joiner, carpenter",
     "snige": "to sneak",
     "sti": "path, track",
-    "stjæle": "to steal",
-    "stolthed": "pride",
     "straffe": "to punish",
     "straks": "immediately",
     "stræde": "strait, alley",
@@ -136,7 +121,6 @@ var dict = {
     "tavs": "silent",
     "tavshed": "silence",
     "telt": "tent",
-    "tidligere": "earlier",
     "tigge": "to beg",
     "trodsig": "defiant",
     "trosfrihed": "freedom of religion",
@@ -153,7 +137,6 @@ var dict = {
     "uden videre": "just like that, as a matter of course",
     "uden": "without, unless",
     "ugæstfri": "inhospitable",
-    "undervisning": "education",
     "uro": "unrest",
     "vare": "to last",
     "vel": "probably",
@@ -161,7 +144,6 @@ var dict = {
     "værksted": "workshop",
     "væv": "tissue, web",
     "væve": "to weave",
-    "væver": "weaver, nimble",
     "æsel": "donkey",
     "ørken": "desert",
     "begå": "commit",
@@ -247,14 +229,11 @@ var dict = {
     "adræt": "agile",
     "sårbar": "vulnerable",
     "vanvittig": "insane, crazy",
-
-
-
-
-
-
-
-
+    "foreslå": "suggest, recommend",
+    "kvæste": "injure",
+    "rode": "make a mess, fumble",
+    "melde": "announce, report, inform",
+    "lynlås": "zip, fastener",
 
 
 };
@@ -335,6 +314,35 @@ var verberForSjov={
     "gå i stå": "stall, stop",
     "gå i gang": "start (something)",
     "gå om": "resit, redo",
+    "have med": "deal with",
+    "have på": "wear",
+    "have for": "have before, lay ahead",
+    "holde af": "love, be fond of",
+    "holde op": "stop",
+    "holde med": "support, side with",
+    "holde ud": "endure, stand",
+    "huske på": "bear in mind, remember",
+    "høre efter": "listen, pay attention",
+    "kaste op": "vomit",
+    "købe ind": "shop (e.g, for groceries)",
+    "køre ned": "run down,  grind down",
+    "lukke inde": "shut inside",
+    "lukke ind" : "admit inside",
+    "lukke ud": "let out",
+    "lukke ude": "locked out",
+    "lukke op": "turn on, open up",
+    "lyne op/ned": "zip/unzip",
+    "lære udenad": "learn by heart",
+    "melde fra": "back out",
+    "melde ind": "join",
+    "melde sig til": "turn oneself in (police)",
+    "melde sig ud": "drop out",
+  
+
+
+
+
+
 };
 
 
