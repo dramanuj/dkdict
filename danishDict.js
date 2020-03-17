@@ -240,6 +240,16 @@ var dict = {
     "bukke": "bow down",
     "snavset": "dirty",
     "jævne": "level, even",
+    "umoden": "immature",
+    "indvendig": "inside",
+    "dvask": "lethargic",
+    "doven": "lazy",
+    "adræt": "agile",
+    "sårbar": "vulnerable",
+    "vanvittig": "insane, crazy",
+
+
+
 
 
 
@@ -275,6 +285,8 @@ var statisticsTerms = {
     "faldende brug af": "falling use of",
     "stigende brug af": "rising use of",
     "tælle": "to count",
+    "mængde": "amount, quantity",
+
     
 };
 
@@ -311,7 +323,18 @@ var verberForSjov={
     "gøre om":"start again",
     "lave om": "alter, change (something concrete)",
     "lave af": "made from",
-    
+    "få til": "lead to, cause",
+    "få af": "get a stain out",
+    "få for": "to get",
+    "få på": "acquire, catch",
+    "give op": "give up",
+    "gøre af": "do with, use (something)",
+    "gøre ved": "propose, to do",
+    "gøre for": "help (in a situation)",
+    "gå af": "retire, go off",
+    "gå i stå": "stall, stop",
+    "gå i gang": "start (something)",
+    "gå om": "resit, redo",
 };
 
 
