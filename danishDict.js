@@ -234,6 +234,9 @@ var dict = {
     "rode": "make a mess, fumble",
     "melde": "announce, report, inform",
     "lynlås": "zip, fastener",
+    "opføre": "behave",
+    "medføre": "entail, cause, carry",
+
 
 
 };
@@ -265,6 +268,14 @@ var statisticsTerms = {
     "stigende brug af": "rising use of",
     "tælle": "to count",
     "mængde": "amount, quantity",
+    "bryde ind": "break in, introduce",
+    "anlægge": "apply, adopt",
+    "forestille": "envision, envisage",
+    "forberede": "prepare for",
+    
+
+
+
 
     
 };
