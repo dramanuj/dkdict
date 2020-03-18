@@ -236,9 +236,16 @@ var dict = {
     "lynlås": "zip, fastener",
     "opføre": "behave",
     "medføre": "entail, cause, carry",
-
-
-
+    "angår": "relates to",
+    "endda": "even if",
+    "kæde": "chain (of people)",
+    "tilstrække": "sufficient, ample",
+    "skuffende": "disappointing",
+    "bekendt": "familiar",
+    "inderlige": "heartfelt",
+    "efterlade pårørende": " surviving next of kin",
+    "fortrøstning": "confidence, trust",
+   
 };
 
 
@@ -249,6 +256,8 @@ var phrasesToKnow = {
     "sige op": "resign",
     "slå op": "break up, stop",
     "i løbet af": "during",
+    "vænnet sig til": "get used to",
+
 
 };
 
@@ -272,11 +281,7 @@ var statisticsTerms = {
     "anlægge": "apply, adopt",
     "forestille": "envision, envisage",
     "forberede": "prepare for",
-    
-
-
-
-
+    "overskud": "profit",
     
 };
 
@@ -313,13 +318,13 @@ var verberForSjov={
     "gøre om":"start again",
     "lave om": "alter, change (something concrete)",
     "lave af": "made from",
-    "få til": "lead to, cause",
-    "få af": "get a stain out",
+    "få til": "acquire,lead to",
+    "få af": "get (something) off",
     "få for": "to get",
-    "få på": "acquire, catch",
+    "få på": "put on, acquire",
     "give op": "give up",
     "gøre af": "do with, use (something)",
-    "gøre ved": "propose, to do",
+    "gøre ved": "propose, change the situationn",
     "gøre for": "help (in a situation)",
     "gå af": "retire, go off",
     "gå i stå": "stall, stop",
