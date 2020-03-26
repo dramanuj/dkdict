@@ -166,7 +166,7 @@ var dict = {
     "træffe": "make (e.g., decision), hit, encounter",
     "afgørende": "significant, important",
     "opfatter": "perceive",
-    "tilstand": "condition",
+    "tilstand": "condition, behavior",
     "feltarbejde": "field work",
     "fornemmelse": "feeling, sense",
     "skelne": "distringuish, discern",
@@ -245,7 +245,16 @@ var dict = {
     "inderlige": "heartfelt",
     "efterlade pårørende": " surviving next of kin",
     "fortrøstning": "confidence, trust",
-   
+    "valgfrit": "optional",
+    "hensigt": "intention, purpose",
+    "anstrengelse": "effort, strain",
+    "beføjelse": "power, authority",
+    "forebyggende": "preventive",
+    "opbakning": "backing, support", 
+    "evne": "ability",
+    "adfærd": "behaviour, conduct",
+    "helbredende": "curative, therapeutic",
+    "fravælger": "do not choose",
 };
 
 
@@ -257,6 +266,8 @@ var phrasesToKnow = {
     "slå op": "break up, stop",
     "i løbet af": "during",
     "vænnet sig til": "get used to",
+    "have adgang til": "have opportunity for",
+
 
 
 };
@@ -282,7 +293,8 @@ var statisticsTerms = {
     "forestille": "envision, envisage",
     "forberede": "prepare for",
     "overskud": "profit",
-    
+    "omdrejningspunkt": "focus point",
+    "medbestemmelse": "co-management",
 };
 
 
@@ -353,7 +365,7 @@ var verberForSjov={
     "melde ind": "join",
     "melde sig til": "turn oneself in (police)",
     "melde sig ud": "drop out",
-  
+    "besparelse": "saving",
 
 
 
@@ -398,7 +410,7 @@ var forbindelseOrd={
     "derimod": "on the other hand",
     "trods alt": "afterall",
     "af den grund": "for this reason",
-    "det skyldes at": "it is because",
+    "det skyldes": "this is due to",
     "arsågen hertil er": "reason for this is",
     "kort og godt": "in short",
     "som sagt": "as said",
@@ -423,6 +435,19 @@ var forbindelseOrd={
     "hverken": "neither",
     "betingelse for": "condition for",
     "såfremt": "in case, as long as",
+    "intdil": "until",
+    "inden": "before",
+    "således": "thus, therefore",
+    "eftersom": "since, because",
+    "tilsvarende": "corresponding, similar",
+    "ovennævnte": "above mentioned",
+    "uforpligtende": "casual, non-commital",
+    "hensigtsmæssig": "appropriate, suitable",
+    "bevarer": "maintain, preserve",
+    "imidlertid": "however, meanwhile",
+    
+
+
 
 
 
