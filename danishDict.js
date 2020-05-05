@@ -255,6 +255,19 @@ var dict = {
     "adfærd": "behaviour, conduct",
     "helbredende": "curative, therapeutic",
     "fravælger": "do not choose",
+    "aftage": "ease off, wane, take",
+    "fornuftig": "sensible, reasonable",
+    "usædvanligt": "unsual",
+    "ligegyldig": "trivial, unimportant",
+    "ligeglad": "indifferent",
+    "udelukker": "eliminate, leave out",
+    "konstatere": "demonstarate, establish",
+    "ordning": "scheme, arrangement",
+    ""
+
+
+
+
 };
 
 
@@ -267,6 +280,7 @@ var phrasesToKnow = {
     "i løbet af": "during",
     "vænnet sig til": "get used to",
     "have adgang til": "have opportunity for",
+
 
 
 
@@ -295,6 +309,9 @@ var statisticsTerms = {
     "overskud": "profit",
     "omdrejningspunkt": "focus point",
     "medbestemmelse": "co-management",
+    "justeres": "adjusts",
+    "suppleres": "supplement with, augment",
+
 };
 
 
@@ -366,6 +383,9 @@ var verberForSjov={
     "melde sig til": "turn oneself in (police)",
     "melde sig ud": "drop out",
     "besparelse": "saving",
+
+
+
 
 
 
@@ -445,6 +465,12 @@ var forbindelseOrd={
     "hensigtsmæssig": "appropriate, suitable",
     "bevarer": "maintain, preserve",
     "imidlertid": "however, meanwhile",
+    "medmindre": "unless",
+    "ikke desto mindre": "nevertheless, even so",
+
+
+
+
     
 
 
