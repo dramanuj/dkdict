@@ -264,11 +264,6 @@ var dict = {
     "udelukker": "eliminate, leave out",
     "konstatere": "demonstarate, establish",
     "ordning": "scheme, arrangement",
-    ""
-
-
-
-
 };
 
 
