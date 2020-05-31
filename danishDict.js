@@ -5,6 +5,7 @@ var dict = {
     "bonde": "farmer",
     "bred": "shore, broad, wide",
     "brede ud": "to spread out, to unfold",
+    "svækker": "weakens",
     "bunke": "pile",
     "byde": "to offer",
     "byld": "abscess",
@@ -467,7 +468,8 @@ var forbindelseOrd={
     "imidlertid": "however, meanwhile",
     "medmindre": "unless",
     "ikke desto mindre": "nevertheless, even so",
-
+    "som nævnt": "as mentioned",
+    "bort set fra": "except",
 
 
 
