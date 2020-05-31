@@ -470,14 +470,4 @@ var forbindelseOrd={
     "ikke desto mindre": "nevertheless, even so",
     "som nævnt": "as mentioned",
     "bort set fra": "except",
-
-
-
-    
-
-
-
-
-
-
 };
