@@ -277,7 +277,7 @@ var phrasesToKnow = {
     "sige op": "resign",
     "slå op": "break up, stop",
     "i løbet af": "during",
-    "vænnet sig til": "get used to",
+    "vænne sig til / vant til": "get used to",
     "have adgang til": "have opportunity for",
 
 
@@ -527,4 +527,7 @@ var pd3words={
     "untagen hvis": "except if",
     "vanskeligt":"troublesome, complicated",
     "vant til": "used to, accustomed",
+    "valgfrit": "optional",
+    "bevare": "preserve"
+
 };
